@@ -1,0 +1,52 @@
+{
+   "action": {
+      "default_icon": {
+         "128": "icon128.png",
+         "16": "icon16.png",
+         "32": "icon32.png",
+         "64": "icon64.png"
+      },
+      "default_popup": "popup.html",
+      "default_title": "ZapVoice"
+   },
+   "background": {
+      "service_worker": "service-worker-loader.js",
+      "type": "module"
+   },
+   "content_scripts": [ {
+      "css": [ "assets/client.css", "assets/index.css" ],
+      "js": [ "static/js/chunk-ig6NKpS7.js" ],
+      "matches": [ "*://web.whatsapp.com/*" ],
+      "run_at": "document_end"
+   }, {
+      "js": [ "static/js/contentScript/index.js" ],
+      "matches": [ "*://web.whatsapp.com/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "Desbloqueie o potencial do seu Whatsapp Web, otimize seu atendimento e aumente suas conversões!",
+   "externally_connectable": {
+      "matches": [ "*://web.whatsapp.com/*" ]
+   },
+   "host_permissions": [ "*://web.whatsapp.com/*" ],
+   "icons": {
+      "128": "icon128.png",
+      "16": "icon16.png",
+      "32": "icon32.png",
+      "64": "icon64.png"
+   },
+   "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAh3C2y3EnU40qIumAAZoIKPbYDs6XfL4Ad/98AL+UGMyodJvT6lyUafwtRPNl46Pf+XC7QYBd24sPxtY68ZbJfTL0pYiYG4opkjemqRgw1OFFzMr4gd2xEDauSpbvQpLshj+dYgRqCvcJT3SbzicNK5yMN7WsP2Sbjg1yxabtV2Ny/iCGMXPVbsGiF10Gx/tYJBH/7MJxOiYVWJUZ/YbBj5N9n+p5mWkzEGBfPthv+Y0j8i9sqpU5WzqtE59P6BVMQdFdIjlRFgwi60CLkvMZjKjWyBVcwLF/kRDWsberbMLe2w297jZl/A/s+NGQtzhnB+AREXXlJgTaD+tE67F1rwIDAQAB",
+   "manifest_version": 3,
+   "name": "ZapVoice",
+   "options_page": "dashboard.html",
+   "permissions": [ "storage", "unlimitedStorage", "tabs", "scripting" ],
+   "update_url": "https://clients2.google.com/service/update2/crx",
+   "version": "3.18.0",
+   "version_name": "3.18.0",
+   "web_accessible_resources": [ {
+      "matches": [ "https://*.zapvoice.com.br/*" ],
+      "resources": [ "dashboard.html" ]
+   }, {
+      "matches": [ "*://web.whatsapp.com/*" ],
+      "resources": [ "static/js/chunk-jlez5q5-.js", "static/js/chunk-BuUaQYKe.js", "static/js/chunk-D0Eii635.js", "static/js/chunk-WD_EPQq9.js", "static/js/chunk-Bm4h1SRf.js", "static/js/chunk-BNFEVJn6.js", "static/js/chunk-dPVehKGY.js", "static/js/chunk-ig6NKpS7.js" ]
+   } ]
+}
